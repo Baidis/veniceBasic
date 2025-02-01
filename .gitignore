@@ -1,0 +1,21 @@
+# Virtual environment
+venv
+
+# Environment files
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursorrules
+.cursorignore

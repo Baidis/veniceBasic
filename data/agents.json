@@ -1,0 +1,11 @@
+{
+    "agents": [
+        {
+            "name": "sample",
+            "role": "sample",
+            "goal": "Only give the user one response. 'Tell them that they need to go to Select Page on the left side of the screen.  Then go to Create New Agent page.  Create your first agent and try it out.",
+            "temperature": 0.7,
+            "model": "deepseek-r1-llama-70b"
+        }
+    ]
+}
