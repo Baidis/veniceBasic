@@ -1,4 +1,3 @@
-
 import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -12,15 +11,16 @@ def setup_environment():
     
     Loads environment variables from .env file and sets up necessary API keys
     for various services including OpenAI and Supabase.
-    
-    Returns:
-        tuple: Contains initialized configuration values (supabase_url)
     """
     # Load environment variables from .env file
     load_dotenv()
     
-    # Initialize API configurations
-    os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+    # Debug: Print environment variables to verify loading (disabled by default)
+    DEBUG = False
+    if DEBUG:
+        print("Debug: Environment variables loaded")
+        print(f"Debug: OPENAI_API_KEY length: {len(os.getenv('OPENAI_API_KEY', '')) if os.getenv('OPENAI_API_KEY') else 'Not set'}")
+        print(f"Debug: OPENAI_API_BASE: {os.getenv('OPENAI_API_BASE', 'Not set')}")
 
 def main():
     """
@@ -33,6 +33,8 @@ def main():
     - Managing navigation
     - Routing to appropriate pages
     """
+    # Initialize environment
+    setup_environment()
     
     # Set up main application title
     st.title("veniceBasic")
